@@ -2,9 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { Title, TitleSmall } from "./styles";
+
 function App() {
   return (
     <div className="App">
+      <Title fontSize={20}>
+        Hello World
+        <span>texto menor</span>
+      </Title>
+      <TitleSmall>Small</TitleSmall>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
