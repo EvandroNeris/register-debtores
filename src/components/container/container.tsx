@@ -1,6 +1,6 @@
 import React from 'react';
 import { IContainer } from '../../interfaces';
-import { BaseContainer } from '../../styles/base-container';
+import { SBaseContainer } from '../../styles/s.base-container';
 
 const Container: React.FC<IContainer> = ({
   children,
@@ -8,9 +8,9 @@ const Container: React.FC<IContainer> = ({
   height,
   backgroundColor
 }) => (
-  <BaseContainer width={width} height={height} backgroundColor={backgroundColor}>
+  <SBaseContainer width={width} height={height} backgroundColor={backgroundColor}>
   {children}
-  </BaseContainer>
+  </SBaseContainer>
 );
 
 export default Container;

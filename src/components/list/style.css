@@ -1,0 +1,13 @@
+.circle-total {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 100%;
+
+  background-color: #cacaca;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

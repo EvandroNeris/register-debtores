@@ -1,13 +1,18 @@
 import styled from 'styled-components';
 import { IButtonProps } from '../interfaces';
 
-export const ButtonBig = styled.button<IButtonProps>`
+export const SButton = styled.button<IButtonProps>`
   font-size: 20px;
-  height: 50px;
-  width: 100px;
+  
+  height: 60px;
+  width: 200px;
+
   background-color: ${(props) => props.backgroundColor};
   color: white;
+
   border: none;
+
+  cursor: pointer;
 
   &:hover {
     background-color: ${(props) => props.hoverColor};

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonBig } from '../../styles/buttons';
+import { SButton } from '../../styles/s.buttons';
 import { IButtonProps } from '../../interfaces';
 
 const Button: React.FC<IButtonProps> = ({
@@ -7,9 +7,9 @@ const Button: React.FC<IButtonProps> = ({
   hoverColor,
   children
 }) => (
-  <ButtonBig backgroundColor={backgroundColor} hoverColor={hoverColor}>
+  <SButton backgroundColor={backgroundColor} hoverColor={hoverColor}>
     {children}
-  </ButtonBig>
+  </SButton>
 );
 
 export default Button;
