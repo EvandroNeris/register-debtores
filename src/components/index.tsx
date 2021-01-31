@@ -3,11 +3,15 @@ import Container from './container/container';
 import Footer from './footer/footer';
 import Row from './row/row';
 import List from './list/list';
+import UseModal from './modal/useModal';
+import Modal from './modal/modal';
 
 export {
   Button,
   Container,
   Footer,
   Row,
-  List
+  List,
+  Modal,
+  UseModal
 }

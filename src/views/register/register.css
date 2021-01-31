@@ -1,0 +1,19 @@
+.container-description {
+  padding: 40px;
+}
+
+.description-modal {
+  color: #9b9b9b;
+}
+
+.name-user-deleted {
+  color: #EF7C7C;
+
+  font-weight: bold;
+}
+
+.container-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}

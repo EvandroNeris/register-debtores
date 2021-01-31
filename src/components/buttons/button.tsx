@@ -5,9 +5,10 @@ import { IButtonProps } from '../../interfaces';
 const Button: React.FC<IButtonProps> = ({
   backgroundColor,
   hoverColor,
-  children
+  children,
+  onClick
 }) => (
-  <SButton backgroundColor={backgroundColor} hoverColor={hoverColor}>
+  <SButton onClick={() => onClick()} backgroundColor={backgroundColor} hoverColor={hoverColor}>
     {children}
   </SButton>
 );

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { IItemList } from '../interfaces';
 
-export const SItemList = styled.li`
+export const SItemList = styled.li<IItemList>`
   list-style: none;
   
-  background-color: white;
+  background-color: ${(props) => props.backgroundColor};
   color: #b3b3b3;
 
   height: 70px;
