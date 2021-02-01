@@ -4,6 +4,8 @@ import IContainer from './i.container';
 import IList from './i.list';
 import IModalProps from './i.modal';
 import IItemList from './i.item-list';
+import IDelete from './i.delete';
+import IInput from './i.input';
 
 export type {
   IElement,
@@ -11,5 +13,7 @@ export type {
   IContainer,
   IList,
   IModalProps,
-  IItemList
+  IItemList,
+  IDelete,
+  IInput
 }

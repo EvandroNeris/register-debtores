@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Container, Footer, Row, List, UseModal, Modal } from '../../components';
+import { Button, Container, Footer, Row, List, Modal } from '../../components';
 import { IElement } from '../../interfaces';
 import { getUser, deleteUser } from '../../services/users';
 import './register.css';
 import _ from 'lodash';
+import New from '../../components/modal/modal-templates/new';
+import Delete from '../../components/modal/modal-templates/delete';
 
 function Register(): IElement {
-  const { isShown, toggle } = UseModal();
+  const [isShown, setIsShown] = useState<boolean>(false);
 
-  const [users, setUsers] = useState([]);
-  const [itemSelected, setItemSelected] = useState(false);
-  const [nameUserSelected, setNameUserSelected] = useState({});
+  const [users, setUsers] = useState<any>([]);
+  const [itemSelected, setItemSelected] = useState<boolean>(false);
+  const [nameUserSelected, setNameUserSelected] = useState<string>('');
   const [content, setContent] = useState<any | null>();
   const [idUser, setIdUser] = useState<number>(0);
 
@@ -34,38 +36,21 @@ function Register(): IElement {
 
   function handleDelete() {
     deleteUser(idUser);
+    onToggle();
+  }
+
+  function onToggle() {
     toggle();
   }
 
   function handleModal(type: string): void {
     toggle();
-    type == 'new' ? setContent(
-      <React.Fragment>
-      
-      <div>
-        <Button onClick={toggle} backgroundColor={'#EF7C7C'} hoverColor={'#FAA4A4'}>
-          Excluir
-        </Button>
-        <Button onClick={toggle} backgroundColor={'#32DE82'} hoverColor={'#5BE69B'}>
-          Salvar
-        </Button>
-      </div>
-    </React.Fragment>
-    ) : setContent(
-      <React.Fragment>
-        <div className="container-description">
-          <p className="description-modal">Tem certeza que deseja realmente exluir:  <span className="name-user-deleted">{nameUserSelected}</span>?</p>
-        </div>
-        <div className="container-buttons">
-          <Button onClick={toggle} backgroundColor={'#c2c2c2'} hoverColor={'#e0dede'}>
-            Cancelar
-          </Button>
-          <Button onClick={() => handleDelete()} backgroundColor={'#EF7C7C'} hoverColor={'#FAA4A4'}>
-            Confirmar
-          </Button>
-        </div>
-      </React.Fragment>
-    );
+    type == 'new' ? setContent(<New></New>) : setContent(<Delete showModal={() => onToggle()} handleDelete={handleDelete} nameUserSelected={nameUserSelected}></Delete>);
+  }
+
+  function toggle() {
+    console.log(isShown);
+    setIsShown(!isShown);
   }
 
   return (

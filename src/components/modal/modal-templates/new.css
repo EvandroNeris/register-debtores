@@ -1,0 +1,9 @@
+.container-inputs {
+  width: 500px;
+  padding: 30px;
+}
+
+.container-buttons {
+  display: flex;
+  justify-content: flex-end;
+}

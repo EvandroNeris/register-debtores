@@ -13,7 +13,7 @@ export const SButton = styled.button<IButtonProps>`
   border: none;
 
   cursor: pointer;
-
+  
   &:hover {
     background-color: ${(props) => props.hoverColor};
   }

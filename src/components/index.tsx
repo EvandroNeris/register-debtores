@@ -3,7 +3,6 @@ import Container from './container/container';
 import Footer from './footer/footer';
 import Row from './row/row';
 import List from './list/list';
-import UseModal from './modal/useModal';
 import Modal from './modal/modal';
 
 export {
@@ -12,6 +11,5 @@ export {
   Footer,
   Row,
   List,
-  Modal,
-  UseModal
+  Modal
 }
